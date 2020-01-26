@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Music_app</string>
+    <string name="albums_page">Stored Albums</string>
+</resources>

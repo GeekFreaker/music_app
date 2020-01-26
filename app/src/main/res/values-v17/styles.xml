@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Heading_One">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:color">@color/textColor</item>
+        <item name="android:background">@color/bck_textColor</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>
