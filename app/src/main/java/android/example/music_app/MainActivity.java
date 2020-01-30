@@ -32,23 +32,23 @@ public class MainActivity extends AppCompatActivity {
         AllAlbums = new Album[2];
         //album 1
         mEightSevenZeroOneTracks = new ArrayList<Song>();
-        mEightSevenZeroOneTracks.add( new Song("R&B",2.99,"Intro-Lude 8701",1, TimeUnit.MILLISECONDS.toMinutes(26400 )));//0:44
-//        mEightSevenZeroOneTracks[1] = new Song("R&B",2.99,"U remind me",2,TimeUnit.MILLISECONDS.toMinutes(255600 ));//4.22
-//        mEightSevenZeroOneTracks[2] = new Song("R&B",2.99,"I don't know",3,TimeUnit.MILLISECONDS.toMinutes(255600 ));//4.26
-//        mEightSevenZeroOneTracks[3] = new Song("R&B",2.99,"Twerk it out",4,TimeUnit.MILLISECONDS.toMinutes(256200 ));//4:42
-//        mEightSevenZeroOneTracks[4] = new Song("R&B",2.99,"U got it Bad",5,TimeUnit.MILLISECONDS.toMinutes(175000 ));//4:07
-//        mEightSevenZeroOneTracks[5] = new Song("R&B",2.99,"Pop Ya collar",6,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:35
-//        mEightSevenZeroOneTracks[6] = new Song("R&B",2.99,"If I want to",7,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:46
-//        mEightSevenZeroOneTracks[7] = new Song("R&B",2.99,"I can't let you go",8,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:28
-//        mEightSevenZeroOneTracks[8] = new Song("R&B",2.99,"U don't have to call",9,TimeUnit.MILLISECONDS.toMinutes(175000 ));//4:29
-//        mEightSevenZeroOneTracks[9] = new Song("R&B",2.99,"Without U (interlude)",10,TimeUnit.MILLISECONDS.toMinutes(175000 ));//0:53
-//        mEightSevenZeroOneTracks[10] = new Song("R&B",2.99,"Can U help me",11,TimeUnit.MILLISECONDS.toMinutes(175000 ));//5:35
-//        mEightSevenZeroOneTracks[11] = new Song("R&B",2.99,"How do I say",12,TimeUnit.MILLISECONDS.toMinutes(175000 ));//5:39
-//        mEightSevenZeroOneTracks[12] = new Song("R&B",2.99,"Hottest thing",13,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:49
-//        mEightSevenZeroOneTracks[13] = new Song("R&B",2.99,"Good Ol' Ghetto",14,TimeUnit.MILLISECONDS.toMinutes(175000 ));//4:00
-//        mEightSevenZeroOneTracks[14] = new Song("R&B",2.99,"U-Turn",15,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:09
-//        mEightSevenZeroOneTracks[15] = new Song("R&B",2.99,"TTP",16,TimeUnit.MILLISECONDS.toMinutes(175000 ));//3:38
-//        mEightSevenZeroOneTracks[16] = new Song("R&B",2.99,"Separated",17,TimeUnit.MILLISECONDS.toMinutes(175000 ));//4:24
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Intro-Lude 8701",1, TimeUnit.MILLISECONDS.toMinutes(26400 )));//0:44
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U remind me",2,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.22
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I don't know",3,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.26
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Twerk it out",4,TimeUnit.MILLISECONDS.toMinutes(256200 )));//4:42
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U got it Bad",5,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:07
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Pop Ya collar",6,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:35
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"If I want to",7,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:46
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I can't let you go",8,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:28
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U don't have to call",9,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:29
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Without U (interlude)",10,TimeUnit.MILLISECONDS.toMinutes(175000 )));//0:53
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Can U help me",11,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:35
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"How do I say",12,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:39
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Hottest thing",13,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:49
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Good Ol' Ghetto",14,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:00
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U-Turn",15,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:09
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"TTP",16,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:38
+//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Separated",17,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:24
 
         mEightSevenZeroOne = new Album("8701","2001","Rythmn and Blues by Usher Raymond","R&B",98.67 , mEightSevenZeroOneTracks,R.drawable.usher_album);
 

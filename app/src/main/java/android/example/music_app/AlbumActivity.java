@@ -30,7 +30,7 @@ public class AlbumActivity extends AppCompatActivity {
         ArrayList<Song> AlbumSongs = new ArrayList<>();
         //if(Received!=null) {
 //           AlbumSongs =  Arrays.hashCode(new Serializable[]{Content.getSerializableExtra("Songs")});
-        Content.getParcelableArrayListExtra("Songs");
+        AlbumSongs = Content.<Song>getParcelableArrayListExtra("Songs");
 //           assert AlbumSongs != null;
          SongsAdapter itemAdapter = new SongsAdapter(getApplicationContext(), R.layout.list_album, AlbumSongs);
            ListView listView = (ListView) findViewById(R.id.total_album_list);
