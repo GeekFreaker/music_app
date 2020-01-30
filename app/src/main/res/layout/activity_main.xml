@@ -22,19 +22,14 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="400dp"
-            android:background="@android:color/darker_gray"
-            android:scrollbarTrackHorizontal="true"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:background="@drawable/album_art"
+            android:contentDescription="An image" />
 
-        <ScrollView
+        <ListView
+            android:id="@+id/albums_list"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 

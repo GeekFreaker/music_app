@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Music_app</string>
+    <string name="app_name">MZK APP</string>
     <string name="albums_page">Stored Albums</string>
+    <string name="play">Pay</string>
 </resources>

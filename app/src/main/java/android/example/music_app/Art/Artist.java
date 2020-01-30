@@ -1,16 +1,21 @@
 package android.example.music_app.Art;
 
-public class Artist {
+import java.io.Serializable;
+
+public class Artist implements Serializable {
     private String mName;
     private String mSurname;
-    private int mAlias;
+    private String mAlias;
     private Album [] mAlbum;
 
-    public Artist(String mName, String mSurname, int mAlias, Album[] mAlbum) {
+    public Artist() {
+    }
+
+    public Artist(String mName, String mSurname, String mAlias, Album[] mAlbum) {
         this.mName = mName;
         this.mSurname = mSurname;
         this.mAlias = mAlias;
-        this.mAlbum = mAlbum;
+        this.mAlbum = mAlbum;//array
     }
 
     public String getmName() {
@@ -29,11 +34,11 @@ public class Artist {
         this.mSurname = mSurname;
     }
 
-    public int getmAlias() {
+    public String getmAlias() {
         return mAlias;
     }
 
-    public void setmAlias(int mAlias) {
+    public void setmAlias(String mAlias) {
         this.mAlias = mAlias;
     }
 

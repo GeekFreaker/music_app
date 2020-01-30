@@ -1,20 +1,61 @@
 package android.example.music_app.Art;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.sql.Time;
+import java.util.concurrent.TimeUnit;
 
-public class Song {
+public class Song implements Serializable, Parcelable {
     private String mGenre;
-    private float mPrice;
-    private String mLyrics;
+    private double mPrice;
+    private String mTitle;
     private int mTrackNumber;
-    private Time mTrackLength;
+    private Long mTrackLength;
+    private boolean favorite;
+    private String Lyrics;
 
-    public Song(String mGenre, float mPrice, String mLyrics, int mTrackNumber, Time mTrackLength) {
+    public Song(String mGenre, double mPrice, String mTitle, int mTrackNumber, Long mTrackLength) {
         this.mGenre = mGenre;
         this.mPrice = mPrice;
-        this.mLyrics = mLyrics;
+        this.mTitle = mTitle;
         this.mTrackNumber = mTrackNumber;
         this.mTrackLength = mTrackLength;
+    }
+
+    protected Song(Parcel in) {
+        mGenre = in.readString();
+        mPrice = in.readDouble();
+        mTitle = in.readString();
+        mTrackNumber = in.readInt();
+        if (in.readByte() == 0) {
+            mTrackLength = null;
+        } else {
+            mTrackLength = in.readLong();
+        }
+        favorite = in.readByte() != 0;
+        Lyrics = in.readString();
+    }
+
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        @Override
+        public Song createFromParcel(Parcel in) {
+            return new Song(in);
+        }
+
+        @Override
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+    };
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
     }
 
     public String getmGenre() {
@@ -25,7 +66,7 @@ public class Song {
         this.mGenre = mGenre;
     }
 
-    public float getmPrice() {
+    public double getmPrice() {
         return mPrice;
     }
 
@@ -33,12 +74,12 @@ public class Song {
         this.mPrice = mPrice;
     }
 
-    public String getmLyrics() {
-        return mLyrics;
+    public String getmTitle() {
+        return mTitle;
     }
 
-    public void setmLyrics(String mLyrics) {
-        this.mLyrics = mLyrics;
+    public void setmTitle(String mTitle) {
+        this.mTitle = mTitle;
     }
 
     public int getmTrackNumber() {
@@ -49,11 +90,34 @@ public class Song {
         this.mTrackNumber = mTrackNumber;
     }
 
-    public Time getmTrackLength() {
+    public Long getmTrackLength() {
         return mTrackLength;
     }
 
-    public void setmTrackLength(Time mTrackLength) {
+    public void setmTrackLength(Long mTrackLength) {
         this.mTrackLength = mTrackLength;
+    }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mGenre);
+        dest.writeDouble(mPrice);
+        dest.writeString(mTitle);
+        dest.writeInt(mTrackNumber);
+        dest.writeLong(mTrackLength);
+    }
+
+    private void readFromParcel(Parcel dest) {
+        mGenre = dest.readString();
+        mPrice = dest.readDouble();
+        mTitle = dest.readString();
+        mTrackNumber = dest.readInt();
+        mTrackLength = dest.readLong();
     }
 }

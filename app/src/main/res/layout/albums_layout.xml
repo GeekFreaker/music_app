@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/album_snapshot"
+        android:layout_width="100dp"
+        android:layout_height="123dp"
+        app:srcCompat="@android:drawable/alert_dark_frame" />
+
+    <LinearLayout
+        android:id="@+id/album_click"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTAlbumName"
+            style="@style/Heading_Two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtSummary"
+            style="@style/Heading_Three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtGenre_Year"
+            style="@style/Heading_Four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+</LinearLayout>

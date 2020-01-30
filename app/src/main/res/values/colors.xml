@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="textColor">#F8EDED</color>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#996820</color>
+    <color name="colorAccent">#F1E354</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="blueColor">#4698DB</color>
     <color name="bck_textColor">#191616</color>
 </resources>
