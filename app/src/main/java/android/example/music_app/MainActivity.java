@@ -33,48 +33,48 @@ public class MainActivity extends AppCompatActivity {
         //album 1
         mEightSevenZeroOneTracks = new ArrayList<Song>();
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Intro-Lude 8701",1, TimeUnit.MILLISECONDS.toMinutes(26400 )));//0:44
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U remind me",2,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.22
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I don't know",3,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.26
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Twerk it out",4,TimeUnit.MILLISECONDS.toMinutes(256200 )));//4:42
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U got it Bad",5,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:07
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Pop Ya collar",6,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:35
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"If I want to",7,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:46
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I can't let you go",8,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:28
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U don't have to call",9,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:29
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Without U (interlude)",10,TimeUnit.MILLISECONDS.toMinutes(175000 )));//0:53
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Can U help me",11,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:35
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"How do I say",12,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:39
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Hottest thing",13,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:49
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Good Ol' Ghetto",14,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:00
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U-Turn",15,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:09
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"TTP",16,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:38
-//        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Separated",17,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:24
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U remind me",2,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.22
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I don't know",3,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.26
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Twerk it out",4,TimeUnit.MILLISECONDS.toMinutes(256200 )));//4:42
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U got it Bad",5,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:07
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Pop Ya collar",6,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:35
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"If I want to",7,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:46
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I can't let you go",8,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:28
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U don't have to call",9,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:29
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Without U (interlude)",10,TimeUnit.MILLISECONDS.toMinutes(175000 )));//0:53
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Can U help me",11,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:35
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"How do I say",12,TimeUnit.MILLISECONDS.toMinutes(175000 )));//5:39
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Hottest thing",13,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:49
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Good Ol' Ghetto",14,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:00
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U-Turn",15,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:09
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"TTP",16,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:38
+        mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Separated",17,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:24
 
         mEightSevenZeroOne = new Album("8701","2001","Rythmn and Blues by Usher Raymond","R&B",98.67 , mEightSevenZeroOneTracks,R.drawable.usher_album);
 
         //album 2
         mIlladeplhHalfLifeTracks = new ArrayList<Song>();
         mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Intro",1,TimeUnit.MILLISECONDS.toMinutes(1000)));//0"34
-//        mIlladeplhHalfLifeTracks[1] = new Song("Hip-Hop",3.99,"Respond/React",2,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[2] = new Song("Hip-Hop",3.99,"Section",3,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[3] = new Song("Hip-Hop",3.99,"Panic!!!!!",4,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[4] = new Song("Hip-Hop",3.99,"It just don't stop",5,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[5] = new Song("Hip-Hop",3.99,"Episodes",6,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[6] = new Song("Hip-Hop",3.99,"Push up ya lighter",7,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[7] = new Song("Hip-Hop",3.99,"What they do",8,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[8] = new Song("Hip-Hop",3.99,"? vs Scratch",9,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[9] = new Song("Hip-Hop",3.99,"Concerto of the Desperado",10,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[10] = new Song("Hip-Hop",3.99,"CLONES",11,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[11] = new Song("Hip-Hop",3.99,"Respond/React",12,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[12] = new Song("Hip-Hop",3.99,"UNIverse at war",13,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[13] = new Song("Hip-Hop",3.99,"No Alibi",14,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[14] = new Song("Hip-Hop",3.99,"Dave vs Us",15,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[15] = new Song("Hip-Hop",3.99,"No Great Pretender",16,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[16] = new Song("Hip-Hop",3.99,"The Hypnotic",17,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[17] = new Song("Hip-Hop",3.99,"Ital (The Universal Side)",18,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[18] = new Song("Hip-Hop",3.99,"One Side",19,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[19] = new Song("Hip-Hop",3.99,"The Adventures in Wonderland",20,TimeUnit.MILLISECONDS.toMinutes(1000));
-//        mIlladeplhHalfLifeTracks[20] = new Song("Hip-Hop",3.99,"Outro",21,TimeUnit.MILLISECONDS.toMinutes(1000));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",2,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Section",3,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Panic!!!!!",4,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"It just don't stop",5,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Episodes",6,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Push up ya lighter",7,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"What they do",8,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"? vs Scratch",9,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Concerto of the Desperado",10,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"CLONES",11,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",12,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"UNIverse at war",13,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Alibi",14,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Dave vs Us",15,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Great Pretender",16,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Hypnotic",17,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Ital (The Universal Side)",18,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"One Side",19,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Adventures in Wonderland",20,TimeUnit.MILLISECONDS.toMinutes(1000)));
+        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Outro",21,TimeUnit.MILLISECONDS.toMinutes(1000)));
 
         mIlladelphHalflife = new Album("Illadelph HalfLife","1996","90's Hip-Hop Album by the Roots","Hip Hop",64.99,mIlladeplhHalfLifeTracks,R.drawable.illadelph_album);
         //create two albums and all the information for that album

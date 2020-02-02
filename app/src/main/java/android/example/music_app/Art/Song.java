@@ -4,38 +4,34 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
-import java.sql.Time;
-import java.util.concurrent.TimeUnit;
 
 public class Song implements Serializable, Parcelable {
     private String mGenre;
     private double mPrice;
     private String mTitle;
     private int mTrackNumber;
-    private Long mTrackLength;
-    private boolean favorite;
+    private long mTrackLength;
+    private int favorite;
     private String Lyrics;
 
-    public Song(String mGenre, double mPrice, String mTitle, int mTrackNumber, Long mTrackLength) {
+    public Song(String mGenre, double mPrice, String mTitle, int mTrackNumber, long mTrackLength) {
         this.mGenre = mGenre;
         this.mPrice = mPrice;
         this.mTitle = mTitle;
         this.mTrackNumber = mTrackNumber;
         this.mTrackLength = mTrackLength;
+        this.favorite = 0;
+        this.Lyrics = "";
     }
 
     protected Song(Parcel in) {
+        Lyrics = in.readString();
+        favorite = in.readInt();
         mGenre = in.readString();
         mPrice = in.readDouble();
         mTitle = in.readString();
+        mTrackLength = in.readLong();
         mTrackNumber = in.readInt();
-        if (in.readByte() == 0) {
-            mTrackLength = null;
-        } else {
-            mTrackLength = in.readLong();
-        }
-        favorite = in.readByte() != 0;
-        Lyrics = in.readString();
     }
 
     public static final Creator<Song> CREATOR = new Creator<Song>() {
@@ -50,11 +46,11 @@ public class Song implements Serializable, Parcelable {
         }
     };
 
-    public boolean isFavorite() {
+    public int isFavorite() {
         return favorite;
     }
 
-    public void setFavorite(boolean favorite) {
+    public void setFavorite(int favorite) {
         this.favorite = favorite;
     }
 
@@ -106,18 +102,20 @@ public class Song implements Serializable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(Lyrics);
+        dest.writeInt(favorite);
         dest.writeString(mGenre);
         dest.writeDouble(mPrice);
         dest.writeString(mTitle);
-        dest.writeInt(mTrackNumber);
         dest.writeLong(mTrackLength);
+        dest.writeInt(mTrackNumber);
     }
 
-    private void readFromParcel(Parcel dest) {
-        mGenre = dest.readString();
-        mPrice = dest.readDouble();
-        mTitle = dest.readString();
-        mTrackNumber = dest.readInt();
-        mTrackLength = dest.readLong();
-    }
+//    private void readFromParcel(Parcel dest) {
+//        mGenre = dest.readString();
+//        mPrice = dest.readDouble();
+//        mTitle = dest.readString();
+//        mTrackNumber = dest.readInt();
+//        mTrackLength = dest.readLong();
+//    }
 }

@@ -12,7 +12,8 @@ public class ArtistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artist);
 
-        Intent Arts = getIntent();
+//        Intent Arts = getIntent();
 //        Arts.getExtras().getStringArrayList();
+//        getIntent().getExtras();
     }
 }

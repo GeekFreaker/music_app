@@ -1,11 +1,12 @@
 package android.example.music_app.Art;
 
+import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Album implements Serializable {
+public class Album implements Serializable,Parcelable {
     private String mTitle;
     private String mYear;
     private String mSummary;
@@ -27,31 +28,31 @@ public class Album implements Serializable {
         this.albumart = ImageResource;
     }
 
-//    protected Album(Parcel in) {
-//        mTitle = in.readString();
-//        mYear = in.readString();
-//        mSummary = in.readString();
-//        mGenre = in.readString();
-//        if (in.readByte() == 0) {
-//            mPrice = null;
-//        } else {
-//            mPrice = in.readDouble();
-//        }
-//        mTracks = in.createTypedArrayList(Song.CREATOR);
-//        albumart = in.readInt();
-//    }
-//
-//    public static final Creator<Album> CREATOR = new Creator<Album>() {
-//        @Override
-//        public Album createFromParcel(Parcel in) {
-//            return new Album(in);
-//        }
-//
-//        @Override
-//        public Album[] newArray(int size) {
-//            return new Album[size];
-//        }
-//    };
+    protected Album(Parcel in) {
+        mTitle = in.readString();
+        mYear = in.readString();
+        mSummary = in.readString();
+        mGenre = in.readString();
+        if (in.readByte() == 0) {
+            mPrice = null;
+        } else {
+            mPrice = in.readDouble();
+        }
+        mTracks = in.createTypedArrayList(Song.CREATOR);
+        albumart = in.readInt();
+    }
+
+    public static final Creator<Album> CREATOR = new Creator<Album>() {
+        @Override
+        public Album createFromParcel(Parcel in) {
+            return new Album(in);
+        }
+
+        @Override
+        public Album[] newArray(int size) {
+            return new Album[size];
+        }
+    };
 
     public String getmTitle() {
         return mTitle;
@@ -101,7 +102,7 @@ public class Album implements Serializable {
         this.mPrice = mPrice;
     }
 
-    public ArrayList<? extends Parcelable> getmTracks() {
+    public ArrayList<Song> getmTracks() {
         return mTracks;
     }
 
@@ -109,27 +110,27 @@ public class Album implements Serializable {
         this.mTracks = mTracks;
     }
 
-//    @Override
-//    public int describeContents() {
-//        return 0;
-//    }
-//
-//    @Override
-//    public void writeToParcel(Parcel dest, int flags) {
-//        dest.writeString(mTitle);
-//        dest.writeString(mYear);
-//        dest.writeString(mSummary);
-//        dest.writeString(mGenre);
-//        dest.writeDouble(mPrice);
-//        dest.writeList(this.mTracks);
-//    }
-//
-//    private void readFromParcel(Parcel dest) {
-//        mGenre = dest.readString();
-//        mPrice = dest.readDouble();
-//        mTitle = dest.readString();
-//        mYear = dest.readString();
-//        mSummary = dest.readString();
-////        mTracks = dest.readArrayList(this.mTracks, Song.class.getClassLoader());
-//    }
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mTitle);
+        dest.writeString(mYear);
+        dest.writeString(mSummary);
+        dest.writeString(mGenre);
+        dest.writeDouble(mPrice);
+        dest.writeTypedList(this.mTracks);
+    }
+
+    private void readFromParcel(Parcel dest) {
+        mGenre = dest.readString();
+        mPrice = dest.readDouble();
+        mTitle = dest.readString();
+        mYear = dest.readString();
+        mSummary = dest.readString();
+//        mTracks = dest.readArrayList(this.mTracks, Song.class.getClassLoader());
+    }
 }

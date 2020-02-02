@@ -21,8 +21,11 @@ import java.util.List;
 
 public class SongsAdapter extends ArrayAdapter<Song> {
 
+    private ArrayList<Song> mSongs;
+
     public SongsAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Song> objects) {
         super(context, resource, objects);
+        mSongs = objects;
     }
 
     @NonNull
@@ -30,20 +33,21 @@ public class SongsAdapter extends ArrayAdapter<Song> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.albums_layout, parent, false);
+                    R.layout.list_album, parent, false);
         }
         TextView SongTitleView = convertView.findViewById(R.id.txtSongTitle);
-        TextView SongVGenreiew = convertView.findViewById(R.id.txtSongGenre);
+        TextView SongGenreView = convertView.findViewById(R.id.txtSongGenre);
         TextView DurationView = convertView.findViewById(R.id.txtSongDuration);
         TextView PriceView = convertView.findViewById(R.id.txtSongPrice);
 
-        String TrackData = getItem(position).getmTrackNumber()+"). "+getItem(position).getmTitle();
-        SongTitleView.setText(TrackData);
-        SongVGenreiew.setText(getItem(position).getmGenre());
-        DurationView.setText(getItem(position).getmTrackLength().toString());
-        PriceView.setText(String.valueOf(getItem(position).getmPrice()));
-
-
+        if(mSongs.get(position)!=null) {
+            String TrackData = mSongs.get(position).getmTrackNumber() + "). " + mSongs.get(position).getmTitle();
+            String value = mSongs.get(position).getmTrackLength().toString();
+            SongTitleView.setText(TrackData);
+            SongGenreView.setText(mSongs.get(position).getmGenre());
+            DurationView.setText(value);
+            PriceView.setText(String.valueOf(mSongs.get(position).getmPrice()));
+        }
 
         return convertView;
     }
