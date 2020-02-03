@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/album_snapshot"
         android:layout_width="100dp"
-        android:layout_height="123dp"
+        android:layout_height="120dp"
         app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <LinearLayout

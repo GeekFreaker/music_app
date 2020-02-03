@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:background="@color/genre_gray"
     android:layout_height="match_parent">
 
     <ImageView
+        android:cropToPadding="true"
         android:id="@+id/imageView3"
         android:layout_width="122dp"
+        android:layout_margin="2dp"
         android:layout_height="151dp"
-        android:padding="20dp"
-        android:background="@android:color/background_light"
-        app:srcCompat="@drawable/song"
+        android:padding="60dp"
+        android:background="@drawable/song"
         android:contentDescription="art_album" />
 
     <LinearLayout
@@ -30,7 +33,9 @@
         <TextView
             android:id="@+id/txtSongGenre"
             android:layout_width="match_parent"
+            android:textAlignment="center"
             android:layout_height="50dp"
+            android:textColor="@color/colorPrimaryDark"
             style="@style/Heading_Two"
             android:layout_weight="1"
             android:text="TextView" />
@@ -47,6 +52,7 @@
                 android:layout_height="50dp"
                 style="@style/Heading_Two"
                 android:layout_weight="1"
+                android:textColor="#272727"
                 android:text="TextView" />
 
             <TextView
@@ -54,16 +60,39 @@
                 android:layout_width="50dp"
                 style="@style/Heading_Two"
                 android:layout_height="50dp"
+                android:textColor="#2196F3"
+                android:gravity="end"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/genre_gray"
             android:layout_weight="1"
-            android:text="@string/play" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgFavourite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@android:drawable/btn_star"
+                android:background="@android:drawable/btn_star"
+                android:contentDescription="favorite this song" />
+
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blueColor"
+                android:text="@string/play" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

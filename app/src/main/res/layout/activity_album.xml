@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/genre_gray"
     android:orientation="vertical"
     tools:context=".AlbumActivity">
+
         <ImageView
             android:id="@+id/AlbumView"
             android:layout_width="438dp"
@@ -15,6 +17,7 @@
     <ListView
         android:id="@+id/total_album_list"
         android:orientation="vertical"
+        android:dividerHeight="-20dp"
         android:layout_width="match_parent"
         android:layout_height="454dp" />
 

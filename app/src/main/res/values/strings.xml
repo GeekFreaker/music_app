@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MZK APP</string>
     <string name="albums_page">Stored Albums</string>
-    <string name="play">Pay</string>
+    <string name="play">show lyrics</string>
+    <string name="your_favs">These are your favourties in the Album.</string>
 </resources>

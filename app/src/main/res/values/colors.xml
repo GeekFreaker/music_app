@@ -6,4 +6,5 @@
     <color name="textColor">#FFFFFF</color>
     <color name="blueColor">#4698DB</color>
     <color name="bck_textColor">#191616</color>
+    <color name="genre_gray">#968E96</color>
 </resources>

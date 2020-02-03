@@ -9,12 +9,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="@color/bck_textColor"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="196dp"
-            android:layout_height="232dp"
+            android:id="@+id/albm_img"
+            style="@style/Album_Back"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
             tools:layout_editor_absoluteX="68dp"
             tools:layout_editor_absoluteY="184dp"
             tools:srcCompat="@tools:sample/avatars" />
@@ -25,21 +27,25 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/albm_Summary"
+                style="@style/White_text_bold"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="59dp"
+                android:text="TextView"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/albm_Genre"
+                style="@style/White_text_italic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/albm_Year"
+                style="@style/White_text_italic"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -47,13 +53,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:background="@color/genre_gray"
         android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView6"
+            style="@style/White_text_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:textAlignment="center"
+            android:text="@string/your_favs" />
     </ScrollView>
 
     <ListView

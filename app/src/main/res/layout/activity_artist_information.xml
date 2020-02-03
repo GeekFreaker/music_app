@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/genre_gray"
+    android:orientation="vertical"
+    tools:context=".ArtistInformationActivity">
+
+    <ImageView
+        android:id="@+id/art_image"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:layout_weight="1"
+        android:background="@color/bck_textColor"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/trc_name"
+        style="@style/White_text_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/bck_textColor"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/trc_alias"
+        android:textSize="30sp"
+        style="@style/White_text_italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trc_surname"
+        style="@style/White_text_italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:text="TextView" />
+
+
+</LinearLayout>

@@ -8,18 +8,18 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LyricsActivity"/>
-        <activity android:name=".SummaryActivity" />
-        <activity android:name=".FavouriteActivity" />
-        <activity android:name=".AlbumActivity" />
-        <activity android:name=".ArtistActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ArtistInformationActivity"></activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LyricsActivity" />
+        <activity android:name=".AlbumActivity" />
+        <activity android:name=".ArtistActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

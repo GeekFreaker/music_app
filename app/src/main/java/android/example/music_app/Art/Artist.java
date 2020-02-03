@@ -1,8 +1,11 @@
 package android.example.music_app.Art;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
-public class Artist implements Serializable {
+public class Artist implements Serializable, Parcelable {
     private String mName;
     private String mSurname;
     private String mAlias;
@@ -17,6 +20,25 @@ public class Artist implements Serializable {
         this.mAlias = mAlias;
         this.mAlbum = mAlbum;//array
     }
+
+    protected Artist(Parcel in) {
+        mName = in.readString();
+        mSurname = in.readString();
+        mAlias = in.readString();
+        mAlbum = in.createTypedArray(Album.CREATOR);
+    }
+
+    public static final Creator<Artist> CREATOR = new Creator<Artist>() {
+        @Override
+        public Artist createFromParcel(Parcel in) {
+            return new Artist(in);
+        }
+
+        @Override
+        public Artist[] newArray(int size) {
+            return new Artist[size];
+        }
+    };
 
     public String getmName() {
         return mName;
@@ -48,5 +70,18 @@ public class Artist implements Serializable {
 
     public void setmAlbum(Album[] mAlbum) {
         this.mAlbum = mAlbum;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mName);
+        parcel.writeString(mSurname);
+        parcel.writeString(mAlias);
+        parcel.writeTypedArray(mAlbum, i);
     }
 }

@@ -13,19 +13,21 @@ public class Album implements Serializable,Parcelable {
     private String mGenre;
     private Double mPrice;
     private ArrayList<Song> mTracks;//should be an array in future
-    private int albumart;
+    private int albumArt;
+    private Artist artist;
 
     public Album() {
     }
 
-    public Album(String mTitle, String mYear, String mSummary, String mGenre, Double mPrice, ArrayList<Song> mTracks, int ImageResource) {
+    public Album(String mTitle, String mYear, String mSummary, String mGenre, Double mPrice, ArrayList<Song> mTracks, int ImageResource, Artist artist) {
         this.mTitle = mTitle;
         this.mYear = mYear;
         this.mSummary = mSummary;
         this.mGenre = mGenre;
         this.mPrice = mPrice;
         this.mTracks = mTracks;
-        this.albumart = ImageResource;
+        this.albumArt = ImageResource;
+        this.artist = artist;
     }
 
     protected Album(Parcel in) {
@@ -39,8 +41,9 @@ public class Album implements Serializable,Parcelable {
             mPrice = in.readDouble();
         }
         mTracks = in.createTypedArrayList(Song.CREATOR);
-        albumart = in.readInt();
-    }
+        albumArt = in.readInt();
+        artist = in.readParcelable(Album.class.getClassLoader());
+;    }
 
     public static final Creator<Album> CREATOR = new Creator<Album>() {
         @Override
@@ -62,12 +65,12 @@ public class Album implements Serializable,Parcelable {
         this.mTitle = mTitle;
     }
 
-    public int getAlbumart() {
-        return albumart;
+    public int getAlbumArt() {
+        return albumArt;
     }
 
-    public void setAlbumart(int albumart) {
-        this.albumart = albumart;
+    public void setAlbumArt(int albumArt) {
+        this.albumArt = albumArt;
     }
 
     public String getmYear() {
@@ -117,20 +120,21 @@ public class Album implements Serializable,Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mTitle);
-        dest.writeString(mYear);
-        dest.writeString(mSummary);
+        dest.writeInt(albumArt);
+        dest.writeArray(new Artist[]{this.artist});
         dest.writeString(mGenre);
-        dest.writeDouble(mPrice);
+//        dest.writeDouble(mPrice);
+        dest.writeString(mSummary);
         dest.writeTypedList(this.mTracks);
+        dest.writeString(mYear);
+        dest.writeString(mTitle);
     }
 
-    private void readFromParcel(Parcel dest) {
-        mGenre = dest.readString();
-        mPrice = dest.readDouble();
-        mTitle = dest.readString();
-        mYear = dest.readString();
-        mSummary = dest.readString();
-//        mTracks = dest.readArrayList(this.mTracks, Song.class.getClassLoader());
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
     }
 }

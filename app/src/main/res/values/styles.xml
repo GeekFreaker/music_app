@@ -6,37 +6,58 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/heimeiry_regular</item>
+<!--        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/heimeiry_regular</item>-->
 
     </style>
 
     <style name="Heading_One">
-        <item name="android:textSize">25sp</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:color">@color/textColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/textColor</item>
         <item name="android:textAlignment" tools:ignore="NewApi">center</item>
     </style>
 
     <style name="Heading_Two">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:padding">10dp</item>
-        <item name="android:color">@color/textColor</item>
+        <item name="android:textColor">@color/textColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Heading_Three">
         <item name="android:textSize">16sp</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:color">@color/blueColor</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/textColor</item>
         <item name="android:textStyle">italic</item>
     </style>
 
     <style name="Heading_Four">
         <item name="android:textSize">10sp</item>
         <item name="android:padding">10dp</item>
-        <item name="android:color">@color/blueColor</item>
+        <item name="android:textColor">@color/blueColor</item>
+        <item name="android:shadowColor">@color/textColor</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">textEnd</item>
+    </style>
+
+    <style name="Album_Back">
+        <item name="android:background">@color/bck_textColor</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="White_text_bold">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+<!--        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/heimeiry_regular</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="White_text_italic">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+        <item name="android:verticalSpacing">10dp</item>
+<!--        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/heimeiry_regular</item>-->
+        <item name="android:textStyle">italic</item>
     </style>
 
 </resources>

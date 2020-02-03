@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     Album mEightSevenZeroOne = new Album();
     Album mIlladelphHalflife = new Album();
-    Album[] AllAlbums;
+    Album[] AllAlbums = new Album[1];
 
     ArrayList<Song> mEightSevenZeroOneTracks;
     ArrayList<Song> mIlladeplhHalfLifeTracks;
@@ -28,10 +28,36 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //all abums
+        //all albums
         AllAlbums = new Album[2];
+
+        // 1
+        AllAlbums[0] = mEightSevenZeroOne;
+        // the capability to add more than one album to an artist (for memory I limited it to 2 albums)
+        // AllAlbum[1] = ...
+        Usher = new Artist("Usher","Raymond","Usher", AllAlbums);
+        createFirstAlbum();
+
+        // 2
+        AllAlbums[0] = mIlladelphHalflife;
+        // the capability to add more than one album to an artist (for memory I limited it to 2 albums)
+        // AllAlbum[1] = ...
+        BlackThought = new Artist("Tariq","Trotter","BlackThought", AllAlbums);
+        createSecondAlbum();
+
+        // Ensure you add these albums to the UI in the scrollView
+        ArrayList<Album> AllAddedAlbums= new ArrayList<Album>();
+        AllAddedAlbums.add(mEightSevenZeroOne);
+        AllAddedAlbums.add(mIlladelphHalflife);
+
+        AlbumAdapter itemsAdapter = new AlbumAdapter(getApplicationContext(),R.layout.albums_layout,AllAddedAlbums);
+        ListView listView = findViewById(R.id.albums_list);
+        listView.setAdapter(itemsAdapter);
+    }
+
+    private void createFirstAlbum() {
         //album 1
-        mEightSevenZeroOneTracks = new ArrayList<Song>();
+        mEightSevenZeroOneTracks = new ArrayList<>();
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Intro-Lude 8701",1, TimeUnit.MILLISECONDS.toMinutes(26400 )));//0:44
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"U remind me",2,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.22
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"I don't know",3,TimeUnit.MILLISECONDS.toMinutes(255600 )));//4.26
@@ -50,51 +76,36 @@ public class MainActivity extends AppCompatActivity {
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"TTP",16,TimeUnit.MILLISECONDS.toMinutes(175000 )));//3:38
         mEightSevenZeroOneTracks.add(new Song("R&B",2.99,"Separated",17,TimeUnit.MILLISECONDS.toMinutes(175000 )));//4:24
 
-        mEightSevenZeroOne = new Album("8701","2001","Rythmn and Blues by Usher Raymond","R&B",98.67 , mEightSevenZeroOneTracks,R.drawable.usher_album);
+        //Album created
+        mEightSevenZeroOne = new Album("8701","2001","Rythmn and Blues by Usher Raymond","R&B",98.67 , mEightSevenZeroOneTracks,R.drawable.usher_album,Usher);
+        }
 
-        //album 2
-        mIlladeplhHalfLifeTracks = new ArrayList<Song>();
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Intro",1,TimeUnit.MILLISECONDS.toMinutes(1000)));//0"34
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",2,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Section",3,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Panic!!!!!",4,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"It just don't stop",5,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Episodes",6,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Push up ya lighter",7,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"What they do",8,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"? vs Scratch",9,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Concerto of the Desperado",10,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"CLONES",11,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",12,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"UNIverse at war",13,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Alibi",14,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Dave vs Us",15,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Great Pretender",16,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Hypnotic",17,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Ital (The Universal Side)",18,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"One Side",19,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Adventures in Wonderland",20,TimeUnit.MILLISECONDS.toMinutes(1000)));
-        mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Outro",21,TimeUnit.MILLISECONDS.toMinutes(1000)));
+    private void createSecondAlbum(){
+            //album 2
+            mIlladeplhHalfLifeTracks = new ArrayList<>();
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Intro",1,TimeUnit.MILLISECONDS.toMinutes(1000)));//0"34
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",2,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Section",3,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Panic!!!!!",4,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"It just don't stop",5,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Episodes",6,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Push up ya lighter",7,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"What they do",8,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"? vs Scratch",9,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Concerto of the Desperado",10,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"CLONES",11,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Respond/React",12,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"UNIverse at war",13,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Alibi",14,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Dave vs Us",15,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"No Great Pretender",16,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Hypnotic",17,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Ital (The Universal Side)",18,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"One Side",19,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"The Adventures in Wonderland",20,TimeUnit.MILLISECONDS.toMinutes(1000)));
+            mIlladeplhHalfLifeTracks.add(new Song("Hip-Hop",3.99,"Outro",21,TimeUnit.MILLISECONDS.toMinutes(1000)));
 
-        mIlladelphHalflife = new Album("Illadelph HalfLife","1996","90's Hip-Hop Album by the Roots","Hip Hop",64.99,mIlladeplhHalfLifeTracks,R.drawable.illadelph_album);
-        //create two albums and all the information for that album
-        // 1
-        AllAlbums[0] = mEightSevenZeroOne;
-        // the capability to ad more than one album to an artist
-
-        Usher = new Artist("Usher","Raymond","Usher", AllAlbums);
-        // 2
-        AllAlbums[0] = mIlladelphHalflife;
-        // the capability to ad more than one album to an artist
-
-        BlackThought = new Artist("Tariq","Trotter","BlackThought", AllAlbums);
-        // Ensure you add these albums to the UI in the scrollView
-         ArrayList<Album> AllAddedAlbums= new ArrayList<Album>();
-        AllAddedAlbums.add(mEightSevenZeroOne);
-        AllAddedAlbums.add(mIlladelphHalflife);
-
-        AlbumAdapter itemsAdapter = new AlbumAdapter(getApplicationContext(),R.layout.albums_layout, AllAddedAlbums);
-        ListView listView = (ListView) findViewById(R.id.albums_list);
-        listView.setAdapter(itemsAdapter);
-    }
+            //album created
+            mIlladelphHalflife = new Album("Illadelph HalfLife","1996","90's Hip-Hop Album by the Roots","Hip Hop",64.99,mIlladeplhHalfLifeTracks,R.drawable.illadelph_album,BlackThought);
+        }
 }

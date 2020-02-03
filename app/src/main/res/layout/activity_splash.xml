@@ -4,6 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FavouriteActivity">
+    android:background="@color/genre_gray"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="120dp"
+        android:paddingBottom="50dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/album_art"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

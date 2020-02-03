@@ -13,6 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
+            android:background="#968E96"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:shadowColor="@color/bck_textColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Heading_One"
@@ -28,6 +32,9 @@
         <ListView
             android:id="@+id/albums_list"
             android:orientation="vertical"
+            android:background="@color/genre_gray"
+            android:padding="-20dp"
+            android:dividerHeight="0dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

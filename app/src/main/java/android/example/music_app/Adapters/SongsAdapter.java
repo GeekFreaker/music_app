@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.example.music_app.AlbumActivity;
 import android.example.music_app.Art.Song;
+import android.example.music_app.LyricsActivity;
 import android.example.music_app.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +32,7 @@ public class SongsAdapter extends ArrayAdapter<Song> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_album, parent, false);
@@ -39,6 +41,7 @@ public class SongsAdapter extends ArrayAdapter<Song> {
         TextView SongGenreView = convertView.findViewById(R.id.txtSongGenre);
         TextView DurationView = convertView.findViewById(R.id.txtSongDuration);
         TextView PriceView = convertView.findViewById(R.id.txtSongPrice);
+        Button LyricsView = convertView.findViewById(R.id.btnPay);
 
         if(mSongs.get(position)!=null) {
             String TrackData = mSongs.get(position).getmTrackNumber() + "). " + mSongs.get(position).getmTitle();
@@ -47,6 +50,25 @@ public class SongsAdapter extends ArrayAdapter<Song> {
             SongGenreView.setText(mSongs.get(position).getmGenre());
             DurationView.setText(value);
             PriceView.setText(String.valueOf(mSongs.get(position).getmPrice()));
+
+            LyricsView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent ShowLyrics = new Intent(getContext(), LyricsActivity.class);
+                    ShowLyrics.putExtra("lyrics",mSongs.get(position).getLyrics());
+                    ShowLyrics.putExtra("genre",mSongs.get(position).getmGenre());
+                    ShowLyrics.putExtra("title",mSongs.get(position).getmTitle());
+                    ShowLyrics.putExtra("price",mSongs.get(position).getmPrice());
+                    //some random images
+                    if (getItem(position).getmGenre().equals("Hip-Hop")) {
+                        ShowLyrics.putExtra("art",R.drawable.illadelph_one);
+                    } else {
+                        ShowLyrics.putExtra("art",R.drawable.eight_seven_zero_one);
+                    }
+                    ShowLyrics.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getContext().startActivity(ShowLyrics);
+                }
+            });
         }
 
         return convertView;

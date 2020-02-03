@@ -94,6 +94,25 @@ public class Song implements Serializable, Parcelable {
         this.mTrackLength = mTrackLength;
     }
 
+    public void setmPrice(double mPrice) {
+        this.mPrice = mPrice;
+    }
+
+    public void setmTrackLength(long mTrackLength) {
+        this.mTrackLength = mTrackLength;
+    }
+
+    public int getFavorite() {
+        return favorite;
+    }
+
+    public String getLyrics() {
+        return Lyrics;
+    }
+
+    public void setLyrics(String lyrics) {
+        Lyrics = lyrics;
+    }
 
     @Override
     public int describeContents() {
