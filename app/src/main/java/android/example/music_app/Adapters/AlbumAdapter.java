@@ -32,8 +32,8 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
     }
 
     @NonNull
-    public View getView( final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        if(convertView == null) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.albums_layout, parent, false);
         }
@@ -45,17 +45,17 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
 
         TitleView.setText(Collection.get(position).getmTitle());
         SummaryView.setText(Collection.get(position).getmSummary());
-        String YearAndGenre = Collection.get(position).getmYear()+' '+Collection.get(position).getmYear();
+        String YearAndGenre = Collection.get(position).getmYear() + ' ' + Collection.get(position).getmYear();
         YearAndGenreView.setText(YearAndGenre);
         AlbumArt.setImageResource(Collection.get(position).getAlbumArt());
 
         AlbumArt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent TracView = new Intent(getContext(), AlbumActivity.class);
-               TracView.putParcelableArrayListExtra("Songs", getItem(position).getmTracks());
-               TracView.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-               getContext().startActivity(TracView);
+                Intent TracView = new Intent(getContext(), AlbumActivity.class);
+                TracView.putParcelableArrayListExtra("Songs", getItem(position).getmTracks());
+                TracView.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getContext().startActivity(TracView);
             }
         });
 
@@ -63,10 +63,10 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
             @Override
             public void onClick(View v) {
                 Intent TracView = new Intent(getContext(), ArtistActivity.class);
-                TracView.putExtra("Summary",getItem(position).getmSummary());
-                TracView.putExtra("Genre",getItem(position).getmGenre());
-                TracView.putExtra("Year",getItem(position).getmYear());
-                TracView.putExtra("Art",getItem(position).getAlbumArt());
+                TracView.putExtra("Summary", getItem(position).getmSummary());
+                TracView.putExtra("Genre", getItem(position).getmGenre());
+                TracView.putExtra("Year", getItem(position).getmYear());
+                TracView.putExtra("Art", getItem(position).getAlbumArt());
                 TracView.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getContext().startActivity(TracView);
             }
@@ -77,10 +77,10 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
             public boolean onLongClick(View view) {
                 Intent TracView = new Intent(getContext(), ArtistInformationActivity.class);
                 Artist = getItem(position).getArtist();
-                TracView.putExtra("album",Artist.getmAlbum());
-                TracView.putExtra("alias",Artist.getmAlias());
-                TracView.putExtra("name",Artist.getmName());
-                TracView.putExtra("surname",Artist.getmSurname());
+                TracView.putExtra("album", Artist.getmAlbum());
+                TracView.putExtra("alias", Artist.getmAlias());
+                TracView.putExtra("name", Artist.getmName());
+                TracView.putExtra("surname", Artist.getmSurname());
                 TracView.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getContext().startActivity(TracView);
                 return false;

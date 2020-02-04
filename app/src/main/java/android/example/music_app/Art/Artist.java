@@ -9,7 +9,7 @@ public class Artist implements Serializable, Parcelable {
     private String mName;
     private String mSurname;
     private String mAlias;
-    private Album [] mAlbum;
+    private Album[] mAlbum;
 
     public Artist() {
     }
@@ -44,32 +44,16 @@ public class Artist implements Serializable, Parcelable {
         return mName;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
-    }
-
     public String getmSurname() {
         return mSurname;
-    }
-
-    public void setmSurname(String mSurname) {
-        this.mSurname = mSurname;
     }
 
     public String getmAlias() {
         return mAlias;
     }
 
-    public void setmAlias(String mAlias) {
-        this.mAlias = mAlias;
-    }
-
     public Album[] getmAlbum() {
         return mAlbum;
-    }
-
-    public void setmAlbum(Album[] mAlbum) {
-        this.mAlbum = mAlbum;
     }
 
     @Override
@@ -79,9 +63,9 @@ public class Artist implements Serializable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeTypedArray(mAlbum, i);
+        parcel.writeString(mAlias);
         parcel.writeString(mName);
         parcel.writeString(mSurname);
-        parcel.writeString(mAlias);
-        parcel.writeTypedArray(mAlbum, i);
     }
 }

@@ -32,10 +32,9 @@
     </style>
 
     <style name="Heading_Four">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:padding">10dp</item>
-        <item name="android:textColor">@color/blueColor</item>
-        <item name="android:shadowColor">@color/textColor</item>
+        <item name="android:shadowColor">@color/bck_textColor</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">textEnd</item>
     </style>

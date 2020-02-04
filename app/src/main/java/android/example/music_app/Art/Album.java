@@ -61,56 +61,24 @@ public class Album implements Serializable,Parcelable {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
-    }
-
     public int getAlbumArt() {
         return albumArt;
-    }
-
-    public void setAlbumArt(int albumArt) {
-        this.albumArt = albumArt;
     }
 
     public String getmYear() {
         return mYear;
     }
 
-    public void setmYear(String mYear) {
-        this.mYear = mYear;
-    }
-
     public String getmSummary() {
         return mSummary;
-    }
-
-    public void setmSummary(String mSummary) {
-        this.mSummary = mSummary;
     }
 
     public String getmGenre() {
         return mGenre;
     }
 
-    public void setmGenre(String mGenre) {
-        this.mGenre = mGenre;
-    }
-
-    public Double getmPrice() {
-        return mPrice;
-    }
-
-    public void setmPrice(Double mPrice) {
-        this.mPrice = mPrice;
-    }
-
     public ArrayList<Song> getmTracks() {
         return mTracks;
-    }
-
-    public void setmTracks(ArrayList<Song> mTracks) {
-        this.mTracks = mTracks;
     }
 
     @Override
@@ -132,9 +100,5 @@ public class Album implements Serializable,Parcelable {
 
     public Artist getArtist() {
         return artist;
-    }
-
-    public void setArtist(Artist artist) {
-        this.artist = artist;
     }
 }

@@ -8,84 +8,90 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:cropToPadding="true"
         android:id="@+id/imageView3"
-        android:layout_width="122dp"
-        android:layout_margin="2dp"
-        android:layout_height="151dp"
-        android:padding="60dp"
+        android:layout_width="68dp"
+        android:layout_height="76dp"
+        android:layout_margin="4dp"
         android:background="@drawable/song"
-        android:contentDescription="art_album" />
+        android:contentDescription="art_album"
+        android:cropToPadding="true"
+        android:padding="60dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="151dp"
+        android:layout_height="80dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txtSongTitle"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            style="@style/Heading_One"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/txtSongGenre"
-            android:layout_width="match_parent"
-            android:textAlignment="center"
-            android:layout_height="50dp"
-            android:textColor="@color/colorPrimaryDark"
-            style="@style/Heading_Two"
-            android:layout_weight="1"
-            android:text="TextView" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txtSongPrice"
+                android:id="@+id/txtSongGenre"
+                style="@style/Heading_Two"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                style="@style/Heading_Two"
-                android:layout_weight="1"
-                android:textColor="#272727"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
-                android:id="@+id/txtSongDuration"
-                android:layout_width="50dp"
-                style="@style/Heading_Two"
-                android:layout_height="50dp"
-                android:textColor="#2196F3"
-                android:gravity="end"
-                android:layout_weight="1"
+                android:id="@+id/txtSongTitle"
+                style="@style/Heading_One"
+                android:layout_width="200dp"
+                android:layout_weight="0"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:layout_height="47dp"
                 android:text="TextView" />
-        </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSongPrice"
+                    style="@style/Heading_Two"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textColor="#272727" />
+
+                <TextView
+                    android:id="@+id/txtSongDuration"
+                    style="@style/Heading_Two"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="TextView"
+                    android:textColor="#2196F3" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="29dp"
             android:background="@color/genre_gray"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imgFavourite"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                app:srcCompat="@android:drawable/btn_star"
                 android:background="@android:drawable/btn_star"
-                android:contentDescription="favorite this song" />
+                android:contentDescription="favorite this song"
+                app:srcCompat="@android:drawable/btn_star" />
 
             <Button
                 android:id="@+id/btnPay"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/blueColor"
                 android:text="@string/play" />

@@ -8,17 +8,18 @@
     android:orientation="vertical"
     tools:context=".AlbumActivity">
 
-        <ImageView
-            android:id="@+id/AlbumView"
-            android:layout_width="438dp"
-            android:layout_height="305dp"
-            android:contentDescription="TODO" />
+    <ImageView
+        android:id="@+id/AlbumView"
+        android:layout_width="438dp"
+        android:layout_height="305dp"
+        android:background="@color/bck_textColor"
+        android:contentDescription="TODO" />
 
     <ListView
         android:id="@+id/total_album_list"
-        android:orientation="vertical"
-        android:dividerHeight="-20dp"
         android:layout_width="match_parent"
-        android:layout_height="454dp" />
+        android:layout_height="454dp"
+        android:dividerHeight="-20dp"
+        android:orientation="vertical" />
 
 </LinearLayout>

@@ -28,12 +28,12 @@
 
     <TextView
         android:id="@+id/trc_alias"
-        android:textSize="30sp"
         style="@style/White_text_italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/trc_surname"
@@ -41,8 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="30sp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="30sp" />
 
 
 </LinearLayout>

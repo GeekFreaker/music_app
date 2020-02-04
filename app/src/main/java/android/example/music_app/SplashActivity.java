@@ -21,6 +21,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(openSesame);
                 finish();
             }
-        },5000);
+        }, 5000);
     }
 }
