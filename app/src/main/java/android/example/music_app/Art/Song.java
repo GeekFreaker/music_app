@@ -46,72 +46,28 @@ public class Song implements Serializable, Parcelable {
         }
     };
 
-    public int isFavorite() {
-        return favorite;
-    }
-
-    public void setFavorite(int favorite) {
-        this.favorite = favorite;
-    }
-
     public String getmGenre() {
         return mGenre;
-    }
-
-    public void setmGenre(String mGenre) {
-        this.mGenre = mGenre;
     }
 
     public double getmPrice() {
         return mPrice;
     }
 
-    public void setmPrice(float mPrice) {
-        this.mPrice = mPrice;
-    }
-
     public String getmTitle() {
         return mTitle;
-    }
-
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
     }
 
     public int getmTrackNumber() {
         return mTrackNumber;
     }
 
-    public void setmTrackNumber(int mTrackNumber) {
-        this.mTrackNumber = mTrackNumber;
-    }
-
     public Long getmTrackLength() {
         return mTrackLength;
     }
 
-    public void setmTrackLength(Long mTrackLength) {
-        this.mTrackLength = mTrackLength;
-    }
-
-    public void setmPrice(double mPrice) {
-        this.mPrice = mPrice;
-    }
-
-    public void setmTrackLength(long mTrackLength) {
-        this.mTrackLength = mTrackLength;
-    }
-
-    public int getFavorite() {
-        return favorite;
-    }
-
     public String getLyrics() {
         return Lyrics;
-    }
-
-    public void setLyrics(String lyrics) {
-        Lyrics = lyrics;
     }
 
     @Override
@@ -129,12 +85,4 @@ public class Song implements Serializable, Parcelable {
         dest.writeLong(mTrackLength);
         dest.writeInt(mTrackNumber);
     }
-
-//    private void readFromParcel(Parcel dest) {
-//        mGenre = dest.readString();
-//        mPrice = dest.readDouble();
-//        mTitle = dest.readString();
-//        mTrackNumber = dest.readInt();
-//        mTrackLength = dest.readLong();
-//    }
 }
